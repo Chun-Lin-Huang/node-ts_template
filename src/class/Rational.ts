@@ -22,10 +22,6 @@ export class Rational {
         const gcd = this.gcd(this.numerator, this.denominator);
         let newNumerator = this.numerator / gcd;
         let newDenominator = this.denominator / gcd;
-
-        if (newNumerator % newDenominator === 0) {
-            newNumerator += 1;
-        }
         
         return new Rational(newNumerator, newDenominator);
     }
